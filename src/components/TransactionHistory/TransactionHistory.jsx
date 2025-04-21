@@ -1,29 +1,28 @@
-import TransactionHistoryCss from './Transaction.module.css';
+import * as Lale from './Transaction.module.css';
 
 const TransactionHistory = ({ items }) => {
     return (
-        <table>
+        <table className={Lale.transactionHistory}>
             <thead>
-                <tr>
-                    <th>Type</th>
-                    <th>Amount</th>
-                    <th>Currency</th>
+                <tr className={Lale.transactionHistory__head}>
+                    <th className={Lale.transactionHistory_item}>Type</th>
+                    <th className={Lale.transactionHistory_item}>Amount</th>
+                    <th className={Lale.transactionHistory_item}>Currency</th>
                 </tr>
             </thead>
 
             <tbody>
                 {items.map((item, index) => {
                     return (
-                        <tr key={index}>
-                            <td>{item.type}</td>
-                            <td>{item.amount}</td>
-                            <td>{item.currency}</td>
+                        <tr key={index} className={Lale.transaction__list}>
+                            <td className={Lale.transaction__item}>{item.type}</td>
+                            <td className={Lale.transaction__item}>{item.amount}</td>
+                            <td className={Lale.transaction__item}>{item.currency}</td>
                         </tr>
                     )
                 })}
             </tbody>
-        </table >
-
+        </table>
     )
 }
 export default TransactionHistory;
