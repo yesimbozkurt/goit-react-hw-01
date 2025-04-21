@@ -5,8 +5,8 @@ const Profile = ({ name, tag, location, image, stats: { followers, views, likes 
         <div>
             <div>
                 <img
-                    src="{image}"
-                    alt="{name}"
+                    src={image}
+                    alt={name}
                 />
                 <p>{name}</p>
                 <p>{tag}</p>
@@ -30,3 +30,4 @@ const Profile = ({ name, tag, location, image, stats: { followers, views, likes 
         </div>
     )
 }
+export default Profile;
