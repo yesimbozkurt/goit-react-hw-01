@@ -9,7 +9,7 @@ const Profile = ({ name, tag, location, image, stats: { followers, views, likes 
                     alt={name}
                 />
                 <p>{name}</p>
-                <p>{tag}</p>
+                <p>@{tag}</p>
                 <p>{location}</p>
             </div>
 
